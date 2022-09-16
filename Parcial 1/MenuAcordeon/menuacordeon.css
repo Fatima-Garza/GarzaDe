@@ -1,59 +1,87 @@
-*{
-    box-sizing: border-box;
-     margin: 0;
-    padding: 0;
-
-} 
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-ul{
-    list-style: none;
-    
-    height: 20px;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.submenu{
-    display: none;
+ul {
+  list-style: none;
 
-
-
+  height: 20px;
 }
-.submenu:target{
-    display: block;
-    margin-top: 10px;
-    height: 100%;
-    
+.submenu {
+  display: none;
+}
+.submenu:target {
+  display: block;
+  margin-top: 10px;
+  height: 100%;
 }
 
+.menu {
+  display: flex;
+  gap: 20px;
+  background-color: rgb(244, 143, 177);
+  color: rgb(33, 47, 61);
+  justify-content: center;
+  padding: 10px 0;
+  height: 40px;
+}
+.AguaHorchata {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+.Pinacolada {
+  width: 300px;
+  height: 300px;
+}
+.Dip {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+.enlace {
+  color: white;
+  text-decoration: none;
+}
 
+.ventanaModal {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: palevioletred;
+  z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+}
 
+.ventanaModal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
 
-.menu{
-    display: flex;
-    gap: 20px;
-    background-color: rgb(244, 143, 177);
-    color:rgb(33, 47, 61);
-    justify-content: center;
-    padding: 10px 0;
-    height: 40px;
-    
+.ventanaModal > div {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 5px;
+  border-radius: 10px;
+  background: white;
 }
-.AguaHorchata{
-    width: 300px;
-    height: 200px; 
-    object-fit: cover;
+.botonAbrir:hover {
+  color: rgb(4, 0, 7);
 }
-.Pinacolada{
-    width: 300px; ;
-    height: 300px;
+
+.botonCerrar:hover {
+  color: black;
 }
-.Dip{
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-}
-.enlace{
-    color: white;
-    text-decoration: none;
+.botonCerrar {
+  text-decoration: none;
+  color: blueviolet;
 }
