@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(201, 184, 38);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 25% 50% 25%;
+  grid-template-areas:
+    "encabezado encabezado encabezado"
+    "columna1 columna2 columna3"
+    "piepagina piepagina piepagina";
+
+  justify-content: stretch;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.caja {
+  /*width: 100px;
+  height: 100px;*/
+  background-color: blueviolet;
+  text-align: center;
+  border: 2px solid white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 200%;
+}
+
+#caja1 {
+  grid-area: encabezado;
+}
+#caja2 {
+  grid-area: columna1;
+}
+#caja3 {
+  grid-area: columna2;
+}
+#caja4 {
+  grid-area: columna3;
+}
+#caja5 {
+  grid-area: piepagina;
+}
+
+@media screen and (max-width: 900px) {
+  .contenedor {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "encabezado encabezado"
+      "columna1 columna1"
+      "columna2 columna3"
+      "piepagina piepagina";
+  }
+}
+
+#caja2:hover {
+  transform: translate(20px, 20px);
+}
+
+#caja3:hover {
+  transform: scale(1.5);
+  background-color: blanchedalmond;
+}
+
+#miBoton1{
+  
+}
