@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./formulario.css " />
+    
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -101,7 +102,7 @@
             <input type="text" class="form-control" id="Rfc" />
           </div>
           <div class="form-group col-sm-12 col-md-2">
-            <label for="Fecha de Ing " class="form-label">
+            <label for="FechaDeIng " class="form-label">
               Fecha de Ingreso
             </label>
             <input type="text" class="form-control" id="Fecha de Ing" />
@@ -115,7 +116,7 @@
         <div class="row">
           <div class="form-group col-sm-12 col-md-3" borderborder-dark>
             <label for="Area" class="form-label"> Departamento</label>
-            <input type="text" class="form-control" id="Pago" />
+            <input type="text" class="form-control" id="Area" />
           </div>
           <div class="form-group col-sm-12 col-md-2">
             <label for="Salario" class="form-label"> Salario </label>
@@ -125,10 +126,32 @@
 
         <div class="row">
           <div class="form-group col-sm-12">
-            <button type="submit" class="btn btn-primary">Guadar Datos</button>
+            <button id="btnGet" type="button" class="btn btn-primary">Guadar Datos</button>
           </div>
         </div>
       </form>
     </div>
+    <script>
+      document.getElementById("btnGet").addEventListener("click", async () => {
+        let respuesta = await fetch('Get.php');
+        let dato = await respuesta.json();
+        document.getElementById("NombreEmpleado").value = dato.NombreEmpleado;
+        document.getElementById("ApellidoPa").value = dato.ApellidoPa;
+        document.getElementById("ApellidoMa").value = dato.ApellidoMa;
+        document.getElementById("FechaDeNac").value = dato.FechaDeNac;
+        document.getElementById("Edad").value = dato.Edad;
+        document.getElementById("Direccion").value = dato.Direccion;
+        document.getElementById("Colonia").value = dato.Col;
+        document.getElementById("Postal").value = dato.Postal;
+        document.getElementById("Correo").value = dato.Correo;
+        document.getElementById("NumeroCel").value = dato.NumeroCel;
+        document.getElementById("Curp").value = dato.Curp;
+        document.getElementById("Rfc").value = dato.Rfc;
+        document.getElementById("FechaDeIng").value = dato.FechaDeIngreso;
+        document.getElementById("Puesto").value = dato.Puesto;
+        document.getElementById("Area").value = dato.Area;
+        document.getElementById("Salario").value = dato.Salario;
+      });
+    </script>
   </body>
 </html>
