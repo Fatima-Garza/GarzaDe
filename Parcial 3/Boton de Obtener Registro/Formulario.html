@@ -69,7 +69,7 @@
 
           <div class="form-group col-sm-12 col-md-4 col-lg-4">
             <label for="Col" class="form-label"> Colonia </label>
-            <input type="text" class="form-control" id="Col" />
+            <input type="text" class="form-control" id="Colonia" />
           </div>
         </div>
 
@@ -105,7 +105,7 @@
             <label for="FechaDeIng " class="form-label">
               Fecha de Ingreso
             </label>
-            <input type="text" class="form-control" id="Fecha de Ing" />
+            <input type="text" class="form-control" id="FechaDeIng" />
           </div>
           <div class="form-group col-sm-12 col-md-2 col-lg-3">
             <label for="Puesto" class="form-label"> Puesto </label>
@@ -131,27 +131,6 @@
         </div>
       </form>
     </div>
-    <script>
-      document.getElementById("btnGet").addEventListener("click", async () => {
-        let respuesta = await fetch('Get.php');
-        let dato = await respuesta.json();
-        document.getElementById("NombreEmpleado").value = dato.NombreEmpleado;
-        document.getElementById("ApellidoPa").value = dato.ApellidoPa;
-        document.getElementById("ApellidoMa").value = dato.ApellidoMa;
-        document.getElementById("FechaDeNac").value = dato.FechaDeNac;
-        document.getElementById("Edad").value = dato.Edad;
-        document.getElementById("Direccion").value = dato.Direccion;
-        document.getElementById("Colonia").value = dato.Col;
-        document.getElementById("Postal").value = dato.Postal;
-        document.getElementById("Correo").value = dato.Correo;
-        document.getElementById("NumeroCel").value = dato.NumeroCel;
-        document.getElementById("Curp").value = dato.Curp;
-        document.getElementById("Rfc").value = dato.Rfc;
-        document.getElementById("FechaDeIng").value = dato.FechaDeIngreso;
-        document.getElementById("Puesto").value = dato.Puesto;
-        document.getElementById("Area").value = dato.Area;
-        document.getElementById("Salario").value = dato.Salario;
-      });
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>

@@ -16,7 +16,5 @@ $FechaDeIng = 17-11-2022;
 $Puesto = 'Gerencia';
 $Area = 'Control y Calidad';
 $Salario = 3000;
-
-echo json_encode(array('Nombre' => $Nombre, 'ApellidoPa' => $ApellidoPa, 'ApellidoMa'=> $ApellidoMa, 'FechaDeNac' =>$FechaDeNac, 'Edad'=>$Edad, 'Direccion'=>$Direccion, 'Col'=> $Col, 'Postal' => $Postal, 'Correo'=>$Correo, 'NumeroCel' => $NumeroCel,'Curp'=>$Curp, 'Rfc'=> $Rfc, 'FechaDeIng' =>$FechaDeIng, 'Puesto'=>$Puesto,)'Area'=>$Area, 'Salario'=>$Salario);
-
+echo json_encode(array('Nombre'=> $Nombre,'ApellidoPa'=> $ApellidoPa,'ApellidoMa'=> $ApellidoMa,'FechaDeNac'=> $FechaDeNac,'Edad'=> $Edad,'Direccion'=> $Direccion,'Col'=> $Col,'Codigo'=> $Codigo,'Correo'=> $Correo,'NumeroCel'=> $NumeroCel,'Curp'=> $Curp,'Rfc'=> $Rfc,'FechaDeIng'=> $FechaDeIng,'Puesto'=> $Puesto,'Area'=> $Area,'Salario'=> $Salario));
 ?>

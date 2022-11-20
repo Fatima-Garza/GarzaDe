@@ -1,15 +1,20 @@
-window.onload = () => {
-
-    const boton = document.querySelector('#btnCargarDatos');
-
-    boton.addEventListener('click', async() => {
-        alert('Hola mundo');
-        const data = await fetch('./data.php');
-        const datos = await data.json();
-        console.log(datos);
-
-        document.querySelector('#InputData').value = datos.Nombre;
-    })
-
-
-}
+document.getElementById("btnGet").addEventListener("click", async () => {
+    let respuesta = await fetch('Get.php');
+    let dato = await respuesta.json();
+    document.getElementById("NombreEmpleado").value = dato.Nombre;
+    document.getElementById("ApellidoPa").value = dato.ApellidoPa;
+    document.getElementById("ApellidoMa").value = dato.ApellidoMa;
+    document.getElementById("FechaDeNac").value = dato.FechaDeNac;
+    document.getElementById("Edad").value = dato.Edad;
+    document.getElementById("Direccion").value = dato.Direccion;
+    document.getElementById("Colonia").value = dato.Col;
+    document.getElementById("Postal").value = dato.Codigo;
+    document.getElementById("Correo").value = dato.Correo;
+    document.getElementById("NumeroCel").value = dato.NumeroCel;
+    document.getElementById("Curp").value = dato.Curp;
+    document.getElementById("Rfc").value = dato.Rfc;
+    document.getElementById("FechaDeIng").value = dato.FechaDeIng;
+    document.getElementById("Puesto").value = dato.Puesto;
+    document.getElementById("Area").value = dato.Area;
+    document.getElementById("Salario").value = dato.Salario;
+  });
