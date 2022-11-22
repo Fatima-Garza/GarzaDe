@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="FormData.css"> 
+    <title>Document</title>
+</head>
+<body>
+    <h1>FormData</h1>
+    <form id="formulario">
+        <label for="Id">Id:</label>
+        <input type="text" name="Id" id="Id">
+        <label for="Nombre">Nombre:</label>
+        <input type="text" name="Nombre" id="Nombre">
+        <label for="ApellidoPa">Apellido paterno:</label>
+        <input type="text" name="ApellidoPa" id="ApellidoPa">
+        <label for="ApellidoMa">Apellido materno:</label>
+        <input type="text" name="ApellidoMa" id="ApellidoMa">
+        <label for="Edad">Edad:</label>
+        <input type="text" name="Edad" id="Edad">
+        <label for="Direccion">Direccion:</label>
+        <input type="text" name="Direccion" id="Direccion">
+        <button id="btn">Consultar</button>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", async(event)=> {
+          event.preventDefault();
+          var datosFormulario = new FormData(document.getElementById("formulario"));
+          let respuesta = await fetch ('formData.php',{
+            method : 'POST',
+            body: datosFormulario
+          })
+          let dato = await respuesta.json();
+
+          document.getElementById("Id").value = dato.id_Empleado;
+          document.getElementById("Nombre").value = dato.Nombre;
+          document.getElementById("ApellidoPa").value = dato.ApellidoPa;
+          document.getElementById("ApellidoMa").value = dato.ApellidoMa;
+          document.getElementById("Edad").value = dato.Edad;
+          document.getElementById("Direccion").value=dato.Direccion;
+        });
+      </script>
+
+</body>
+</html>
