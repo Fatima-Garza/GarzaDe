@@ -4,5 +4,6 @@ document.getElementById('btnEditar').addEventListener('click',async()=>{
         method:'POST',
         body:form
     })
-    
+    swal('Empleado editado con éxito!','','success')
+    document.getElementById('formulario').reset()
 })

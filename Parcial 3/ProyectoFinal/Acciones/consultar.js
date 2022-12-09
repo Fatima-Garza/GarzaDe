@@ -27,5 +27,8 @@ document.getElementById('consultar-Emp').addEventListener('click',async()=>{
     $('#Puesto').val(data.Puesto)
     $('#Area').val(data.Area)
     $('#Salario').val(data.Salario)
+    $('#exampleModal').modal('hide')
+    swal('Se encontró el empleado!','','success')
+    
 })
 

@@ -4,4 +4,6 @@ document.getElementById('Eliminar').addEventListener('click',async()=>{
         method:'POST',
         body:form
     })
+    swal('Se eliminó el empleado correctamente!','','success')
+    $('#examplemodal2').modal('hide')
 })
